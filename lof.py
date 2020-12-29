@@ -18,15 +18,18 @@ class LOF:
             "溢价率": "discount_rt",
         }
         # 可在列表中添加想要监控的LOF
-        self.LOFList = [161005, 163402]
+        # 161005 富国天惠
+        # 163402 兴全趋势
+        # 163417 兴全合宜
+        self.LOFList = [161005, 163402, 163417]
         self.LOFList.sort()
         # 微信溢价/折价推送阈值（百分数）
         # 溢价幅度大于等于该参数时提醒
         # 例：如需溢价幅度大于0.5%时推送提醒，将此参数设置为0.5
-        self.disLimit = 0.1
+        self.disLimit = 1
         # 折价幅度大于等于该参数时提醒，通产集思录中折价表现为负值，因此这里为负值
         # 例：如需折价幅度大于1.0%时推送提醒，将此参数设置为-1.0
-        self.preLimit = -0.1
+        self.preLimit = -1
 
         self.session = requests.Session()
         header = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",}
