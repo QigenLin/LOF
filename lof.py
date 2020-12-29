@@ -26,7 +26,7 @@ class LOF:
         self.disLimit = 1.0
         # 折价幅度大于等于该参数时提醒，通产集思录中折价表现为负值，因此这里为负值
         # 例：如需折价幅度大于1.0%时推送提醒，将此参数设置为-1.0
-        self.preLimit = -1.0
+        self.preLimit = -0.1
 
         self.session = requests.Session()
         header = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36",}
